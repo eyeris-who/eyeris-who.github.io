@@ -85,10 +85,32 @@
 
    <p><em>Upload Derrick Files into a Folder</em></p>
    <p>Please make sure Derrick is okay with his pictures or videos being uploaded before you do it! Thank you ^^</p>
-   <form action="upload.php" method="POST" enctype="multipart/form-data">
-       <input type="file" name="file"><br/>
-       <button type="submit" name="submit">UPLOAD</button>
-   </form>
+   <tbody>
+     <tr>
+        </div>
+        <form id="myForm" align="center">
+          <input type="text" name="myName" placeholder="Your name..">
+          <input type="file" name="myFile">
+          <input type="submit" value="Upload File" 
+          onclick="this.value='Uploading..';
+          google.script.run.withSuccessHandler(fileUploaded)
+          .uploadFiles(this.parentNode);
+          return false;">
+          </form>
+          <div id="output"></div>
+          <script>
+          function fileUploaded(status) {
+            document.getElementById('myForm').style.display = 'none';
+            document.getElementById('output').innerHTML = status;
+          }
+          </script>
+          <style>
+          input { display:block; margin: 20px; }
+          </style>
+        </tr>
+      </tbody>
+    </form>
+    <a class="blue" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click to view folder!</a></p>
 
  </body>
  <style>
