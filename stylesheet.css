@@ -1,0 +1,25 @@
+p {
+      color: #FFFFFF;
+      font-size: 16px;
+    }
+
+    form {
+      color: #FFFFFF;
+      font-size: 16px;
+    }
+
+    .blue {
+        color: lightblue
+    }
+ 
+    .big {
+      font-size: 50px;
+    }
+ 
+    em {
+      font-size: 25px;
+    }
+ 
+    body {
+      background:#430973;
+    }
