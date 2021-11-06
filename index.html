@@ -85,11 +85,11 @@
 
    <p><em>Upload Derrick Files</em></p>
    <p>Please make sure Derrick is okay with his pictures or videos being uploaded before you do it! Thank you ^^</p>
-   <form enctype="multipart/form-data" action="__URL__" method="POST">
-    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-    Choose a File to Upload: <input name="userfile" type="file" /><br/>
-    <input type="submit" value="Upload to Website" />
-  </form>
+   <form action="/action_page.php">
+    <label for="img">Select image:</label>
+    <input type="file" id="img" name="img" accept="image/*">
+    <input type="submit">
+   </form>
 
  </body>
  <style>
