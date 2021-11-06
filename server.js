@@ -1,5 +1,5 @@
 function doGet(e) {
-    return HtmlService.createHtmlOutputFromFile('form.html');
+    return HtmlService.createHtmlOutputFromFile('index.html');
           
   }
   
@@ -7,7 +7,7 @@ function doGet(e) {
     
     try {
       
-      var dropbox = "Work_Collector";
+      var dropbox = "Derrick_Ha";
       var folder, folders = DriveApp.getFoldersByName(dropbox);
       
       if (folders.hasNext()) {
