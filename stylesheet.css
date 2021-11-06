@@ -1,25 +1,29 @@
 p {
       color: #FFFFFF;
       font-size: 16px;
-    }
+}
 
-    form {
+form {
       color: #FFFFFF;
       font-size: 16px;
-    }
+}
 
-    .blue {
-        color: lightblue
-    }
- 
-    .big {
+.blue {
+      color: lightblue
+}
+
+.big {
       font-size: 50px;
-    }
+}
  
-    em {
+em {
       font-size: 25px;
-    }
+}
  
-    body {
-      background:#430973;
-    }
+body {
+      background: #430973;
+}
+
+input {
+      display: block; margin: 20px; 
+}
