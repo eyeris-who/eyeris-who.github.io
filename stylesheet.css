@@ -27,3 +27,13 @@ body {
 input {
       display: block; margin: 20px; 
 }
+
+div {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule-style: solid;
+      column-rule: 1px solid lightblue;
+}
+h2 {
+      column-span: all;
+}
