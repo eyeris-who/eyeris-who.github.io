@@ -12,6 +12,8 @@ form {
       column-count: 3;
       column-gap: 40px;
       column-rule: 1px solid lightblue;
+      margin-left: 50px;
+      margin-right: 50px;
 }
 
 .blue {
@@ -38,6 +40,4 @@ form {
 
 body {
       background: #430973;
-      margin-left: 50px;
-      margin-right: 50px;
 }
