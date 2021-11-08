@@ -15,6 +15,15 @@ form {
 .big {
       font-size: 50px;
 }
+
+.title {
+    text-align: center;
+}
+
+.undersub {
+    text-decoration: underline;
+    text-align: center;
+}
  
 em {
       font-size: 25px;
@@ -25,15 +34,6 @@ body {
 }
 
 input {
-      display: block; margin: 20px; 
-}
-
-div {
-      column-count: 3;
-      column-gap: 40px;
-      column-rule-style: solid;
-      column-rule: 1px solid lightblue;
-}
-h2 {
-      column-span: all;
+      display: block; 
+      margin: 20px; 
 }
