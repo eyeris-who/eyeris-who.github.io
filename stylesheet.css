@@ -16,6 +16,14 @@ form {
       margin-right: 70px;
 }
 
+.button-group
+{
+    padding: 5px;
+    border: 2px solid black;
+    outline-style: solid;
+    outline-color: black;
+}
+
 .blue {
       color: lightblue
 }
