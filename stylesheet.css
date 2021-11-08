@@ -1,8 +1,9 @@
 p {
       color: #FFFFFF;
       font-size: 16px;
-      display: block; 
-      margin: 20px;
+      column-count: 3;
+      column-rule-style: solid;
+      column-rule: 1px solid lightblue;
 }
 
 form {
