@@ -16,6 +16,7 @@ form {
             border-width: 1px;
             height: 40px;
             width: 120px;
+}
 
 .threecolumns {
       column-count: 3;
