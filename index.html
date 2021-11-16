@@ -8,22 +8,23 @@
   <br>
   <br>
  <button onclick="myFunction()">Access Website</button>
-  <p id="demo"></p></center>
 
- <script>
+<p id="demo"></p>
+
+<script>
 function myFunction() {
   let text;
-  let person = prompt("Please enter your name:", "Harry Potter");
+  let person = prompt("Please enter the password:", "");
   if (person == null || person == "") {
-    text = "Too scared to guess the password?";
-  } else if (person == "iris is so hot and tall and smart") {
- window.location = 'https://eyeris-who.github.io/information.html';
- else {
-    text = "Get rekt lmao.";
+    text = "User cancelled the prompt.";
+  } else if (person == "iris") {
+  window.location = 'https://eyeris-who.github.io/information.html';
+  } else {
+    text = "ok man";
   }
   document.getElementById("demo").innerHTML = text;
 }
 </script>
-   
- </body>
+
+</body>
 </html>
