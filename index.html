@@ -5,80 +5,24 @@
  <body>
   <center><h1 style="font-size: 50px">Derrick Ha</h1></center>
    <center><img src="https://media.discordapp.net/attachments/900499437753864226/907129268553793596/dicc.jpg?width=540&height=500" style="text-align:center"/></center></img>
- <center><button class="popup" onclick="myFunction()">Click for Access
-  <span class="popuptext" id="myPopup">
-   <p class="undersub">Password:</p>
-   <form action="backlog" onsubmit="myFormSubmit()">
-  <input type="text" id="logsarchives" />
-</form>
-  </span>
-  </button></center>
-</body>
-
-<style>
- .popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-</style>
+ <center><button onclick="myFunction()">Try it</button></center>
+<p id="demo"></p>
 
 <script>
 function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
- function myFormSubmit(event) {
-  event.preventDefault();
-
-  const myInput = document.getElementById('logsarchives');
-
-  if (myInput.value == 'something') {
+  let text;
+  let person = prompt("Please enter the password to access the website:", "");
+  if (person == null || person == "") {
+    text = "Why'd you cancel smh";
+  } else if (person == iris is so hot and tall and smart') {
     window.location = 'https://eyeris-who.github.io/information.html'
+  } else {
+   text = "Lol get rekt"
   }
+  document.getElementById("demo").innerHTML = text;
 }
-</script>
 
+</script>
+ 
+ </body>
 </html>
