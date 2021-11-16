@@ -8,6 +8,15 @@ form {
       font-size: 16px;
 }
 
+.butt {
+      background-color: #9D5906;
+            color: white;
+            border-color: black;
+            border-radius: 5px;
+            border-width: 1px;
+            height: 40px;
+            width: 120px;
+
 .threecolumns {
       column-count: 3;
       column-gap: 40px;
