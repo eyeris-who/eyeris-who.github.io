@@ -1,5 +1,5 @@
 function openWin() {
-  myWindow = window.open("window.location.href='rickroll.html'", "_self");
+  myWindow = window.open("rickroll.html", "_self");
   setTimeout(function(){ myWindow.close(); }, 1000);
 }
 
