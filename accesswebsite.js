@@ -1,6 +1,6 @@
 function openWin() {
   myWindow = window.open("rickroll.html", "_self");
-  setTimeout(myWindow.close(), 1000);
+  setTimeout(myWindow.close(), 3000);
 }
 
 function myFunction() {
