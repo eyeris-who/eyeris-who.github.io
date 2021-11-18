@@ -1,11 +1,8 @@
 function openWin() {
   myWindow = window.open("https://youtu.be/dQw4w9WgXcQ", "_self");
+    setTimeout(function(){ window.close(); }, 3000);
 }
 
-function closeWin() {
-  setTimeout(function(){ window.close(); }, 3000);
-}
-  
 function myFunction() {
   let text;
   let person = prompt("Please enter the password:", "");
@@ -17,7 +14,6 @@ function myFunction() {
   } else {
     text = "Get rekt lmao.";
     openWin();
-    closeWin();
   }
   document.getElementById("demo").innerHTML = text;
 }
