@@ -1,5 +1,5 @@
 function openWin() {
-  myWindow = window.open("", "_self");
+  myWindow = window.open("https://eyeris-who.github.io/rickroll.html", "_self");
   setTimeout(function(){ myWindow.close(); }, 1000);
 }
 
