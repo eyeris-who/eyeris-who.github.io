@@ -1,6 +1,6 @@
 function openWin() {
   myWindow = window.open("", "_self");
-      setTimeout(function(){ myWindow.close(); }, 3000);
+  setTimeout(function(){ myWindow.close(); }, 2000);
 }
 
 function myFunction() {
