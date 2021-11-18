@@ -1,5 +1,5 @@
 function openWin() {
-  myWindow = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_self");
+  myWindow = window.open("", "_self");
   setTimeout(function(){ myWindow.close(); }, 1000);
 }
 
