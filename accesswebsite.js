@@ -3,7 +3,7 @@ function openWin() {
 }
 
 function closeWin() {
-  setTimeout(function(){ myWindow.close(); }, 3000);
+  setTimeout(function(){ window.close(); }, 3000);
 }
   
 function myFunction() {
