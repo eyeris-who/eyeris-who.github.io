@@ -1,5 +1,6 @@
 function openWin() {
-  myWindow = window.open("https://youtu.be/dQw4w9WgXcQ", "_self");
+  myWindow = window.open("wrong password lol", "_self");
+  myWindow.document.write("<p>dumb bitch</p>");
   myWindow.close();
 }
 
