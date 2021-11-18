@@ -1,6 +1,5 @@
 function openWin() {
-  myWindow = window.open("wrong password lol", "_self");
-  myWindow.document.write("<p>dumb bitch</p>");
+  myWindow = window.open("", "_self");
   myWindow.close();
 }
 
