@@ -1,7 +1,7 @@
 :root {
-    --neutrallight: #EAE5DE;
-    --neutralmedium: #BDA88E;
-    --neutraldark: #776246;
+    --darkblue: #0B2554;
+    --mediumblue: #1D59CD;
+    --orange: #FFA07A;
 }
 
 * {
@@ -13,7 +13,7 @@
 
 .nav-container {
     width: 100%;
-    background-color: var(--neutraldark);
+    background-color: var(--darkblue);
 }
 
 .navbar {
@@ -27,7 +27,7 @@
 }
 
 #navbar-logo {
-    color: var(--neutrallight);
+    color: white;
     justify-self: start;
     margin-left: 20px;
 }
@@ -38,7 +38,7 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
     list-style: none;
     text-align: center;
     width: 70%;
@@ -51,11 +51,12 @@
 }
 
 .nav-links:hover {
-    color: var(--neutrallight);
+    color: var(--orange);
     transition: all 0.2s ease-out;
 }
 
 .nav-links-btn {
-    background-color: var(--neutralmedium);
+    background-color: var(--mediumblue);
     padding: 6px 16px;
+    border-radius: 5px;
 }
