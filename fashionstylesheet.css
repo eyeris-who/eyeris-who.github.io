@@ -11,6 +11,20 @@
     font-family: 'Zilla Slab', serif;
 }
 
+body {
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top:0;
+    text-align: center;
+}
+
+content {
+    height: 50px;
+}
+
 .nav-container {
     width: 100%;
     background-color: var(--darkblue);
