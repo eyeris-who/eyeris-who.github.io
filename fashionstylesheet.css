@@ -30,10 +30,7 @@
     color: white;
     justify-self: start;
     margin-left: 20px;
-}
-
-#navbar-logo {
-    cursor: pointer;
+    width: 200px;
 }
 
 .nav-menu {
