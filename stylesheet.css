@@ -20,20 +20,6 @@ form {
       box-sizing: border-box;
 }
 
-body {
-    padding: 0;
-}
-
-header {
-    position: sticky;
-    top:0;
-    text-align: center;
-}
-
-content {
-    height: 50px;
-}
-
 .column {
       float: left;
       width: 20%;
