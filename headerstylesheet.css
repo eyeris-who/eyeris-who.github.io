@@ -92,9 +92,18 @@ h1 {
     background: white;
 }
 
+.short-text { display: none; }
+
 @media screen and (max-width: 1000px) {
+    .short-text {
+        display: block;
+        text-align: center;
+    }
+    .full-text { display: none; }
+    
     .nav-container {
-        position: sticky;
+        position: fixed;
+        margin-top: 0px;
     }
 
     .nav-menu {
