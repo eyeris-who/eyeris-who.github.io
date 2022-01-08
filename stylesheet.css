@@ -11,9 +11,9 @@ form {
 .threecolumns {
       column-count: 3;
       column-gap: 40px;
-      column-rule: 1px solid lightblue;
-      margin-left: 100px;
-      margin-right: 100px;
+      column-rule: 1px solid #B28ECC;
+      margin-left: 10%;
+      margin-right: 10%;
 }
 
 * {
