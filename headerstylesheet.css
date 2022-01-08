@@ -94,7 +94,7 @@ h1 {
 
 @media screen and (max-width: 1000px) {
     .nav-container {
-        position: fixed;
+        position: sticky;
     }
 
     .nav-menu {
