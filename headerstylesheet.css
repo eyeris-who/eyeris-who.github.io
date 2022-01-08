@@ -115,7 +115,7 @@ h1 {
     }
 
     .nav-menu.active {
-        background: #11326C;
+        background: #43116C;
         right: 0;
         opacity: 1;
         transition: all 0.5s ease;
