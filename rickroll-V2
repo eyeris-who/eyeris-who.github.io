@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+<video width="100%" autoplay>
+  <source src="rickroll-V2.mp4" type="video/mp4">
+</video>
+
+</body>
+</html>
