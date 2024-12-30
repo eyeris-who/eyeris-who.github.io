@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    background: #4D2868;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* { 
+    color:black; 
+    text-decoration: none;
+}
+
+.topnav {
+    position: fixed;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: red;
+    transition: all 0.3s ease; 
+}
+
+.topnav.scrolled {
+    position: fixed;
+    margin:auto;
+    left: 1%; /* Position when scrolled */
+    transform: translateX(0); /* Remove center transform when scrolled */
+    width: 50vh; /* Optional: make navbar smaller when scrolled */
+}
+
+.topnav a {
+    position: relative;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+}
+
+.topnav a .icon {
+    transition:0.5s;
+}
+
+.topnav a .text {
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    padding: 7px;
+    background-color: white;
+    border-radius: 30%;
+}
+
+.topnav a:hover .icon {
+    opacity:0;
+}
+
+.topnav a:hover .text {
+    opacity:1;
+}
+
+.float-box {
+    position: fixed;
+    justify-content: center;
+    margin-top: 20%;
+    right: 10%;
+    height: 50vh;
+    width: 30vh;
+    background-color: rgb(255, 215, 222);
+    display: flex;
+    border-radius: 15px 15px 15px 15px;
+    transition: all 0.3s ease;
+}
+
+.float-box.scrolled {
+    margin-top: 1.5%;
+    right: 2.5%;
+    height: 60vh;
+    width: 35vh;
+}
+
+#pfp {
+    position: absolute;
+    margin-top: 10%;
+    margin-bottom: 50%;
+    width: 60%;
+    background-color: blue;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid black;
+}
+
+.name {
+    position:absolute;
+    top: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 15%;
+    border: 1px solid white;
+    background-color: purple;
+}
+
+audio {
+    position: absolute;
+    top: 77%; /* Adjust this value to position it below the .name box */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Adjust width as needed */
+    height: 30px;
+    background-color: #f5f5f5; /* Optional: Add a background color for better visibility */
+    border: 1px solid black; /* Optional: Add a border to match the style */
+    border-radius: 50px; /* Optional: Rounded corners */
+}
+
+.links {
+    position:relative;
+    top: 88%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 7%;
+    border: 1px solid white;
+    background-color: red;
+}
+
+.spacer {
+    width: 100%;
+    height: 95px;
+}
+
+#home {
+    background-color: blue;
+}
+
+span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+  
+ @keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#projects {
+    background-color: pink;
+}
+
+#tools {
+    background-color: green;
+}
+
+#contact {
+    background-color: orange;
+}
+
+.hidden {
+    margin: auto;
+    transition: 1s;
+    height: 1000px;
+    width: 80vh;
+}
+
+.move {
+    margin:2.5%;
+    height: 1000px;
+    left: 2.5%;
+    width: 50vh;
+    background-color: blue;
+}
+
+input[type=text],
+input[type=email] {
+    width: 170px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: lightblue;
+    border:none;
+}
+
+#message {
+    width:100%;
+    height: 200px;
+    border-radius: 5px;
+    background-color: lightblue;
+    border:none;
+}
+
+input, select, button{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#send {
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    background-color:aqua;
+    border:none;
+    transition:0.3s;
+}
+
+#send:hover {
+    background-color: blue;
+    color: white;
+}
