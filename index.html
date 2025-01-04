@@ -8,54 +8,158 @@
     <body>
         <div class="topnav">
             <a href="#top">
-                <img class="icon" src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67774cf0&is=6775fb70&hm=e625230b9349d470f5057f49ae912f6092354429784dcf66b4d4cf542dd9e64a&width=50%height=50" alt="home" border="0"/>
+                <img class="icon" src="images/home.png" height=50 alt="home" border="0"/>
                 <div class="text">home</div>
             </a>
             <a href="#projects">
-                <img class="icon" src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67774cf0&is=6775fb70&hm=e625230b9349d470f5057f49ae912f6092354429784dcf66b4d4cf542dd9e64a&width=50%height=50" alt="projects" border="0"/>
+                <img class="icon" src="images/projects.png" height=50 alt="projects" border="0"/>
                 <div class="text">projects</div>
             </a>
             <a href="#tools">
-                <img class="icon" src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67774cf0&is=6775fb70&hm=e625230b9349d470f5057f49ae912f6092354429784dcf66b4d4cf542dd9e64a&width=50%height=50" alt="tools" border="0"/>
+                <img class="icon" src="images/tools.png" height=50 alt="tools" border="0"/>
                 <div class="text">tools</div>
             </a>
             <a href="#contact">
-                <img class="icon" src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67677af0&is=67662970&hm=de3d84a551a64c73241f0d5998cc2487d45611b921b0fe15e1aa9c8be00aa6ed&=&format=webp&quality=lossless&width=50&height=50" alt="contact me" border="0"/>
+                <img class="icon" src="images/contact.png" height=50 alt="contact me" border="0"/>
                 <div class="text">contact me</div>
             </a>
         </div>
 
         <div class="float-box">
-            <img id="pfp" src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67677af0&is=67662970&hm=de3d84a551a64c73241f0d5998cc2487d45611b921b0fe15e1aa9c8be00aa6ed&=&format=webp&quality=lossless&width=50&height=50" alt="face" border="0"/>
+            <img id="pfp" src="images/winter.jpeg" alt="face" border="0"/>
             <div class="name"><h2>IRIS HU</h2></div>
             <audio autoplay loop controls>
-                <source src="September-Instrumental.mp3" type="audio/mpeg">
+                <source src="images/September-Instrumental.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
             <div class="links">
-                <img src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67677af0&is=67662970&hm=de3d84a551a64c73241f0d5998cc2487d45611b921b0fe15e1aa9c8be00aa6ed&=&format=webp&quality=lossless" width=20px height=20px alt="linkedin" border="0"/>
-                <img src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67677af0&is=67662970&hm=de3d84a551a64c73241f0d5998cc2487d45611b921b0fe15e1aa9c8be00aa6ed&=&format=webp&quality=lossless" width=20px height=20px alt="github" border="0"/>
-                <img src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67677af0&is=67662970&hm=de3d84a551a64c73241f0d5998cc2487d45611b921b0fe15e1aa9c8be00aa6ed&=&format=webp&quality=lossless" width=20px height=20px alt="instagram" border="0"/>
-                <img src="https://cdn.discordapp.com/attachments/914356739799908392/1319855734833283092/poop-emoji-png---images-free-download-6.png?ex=67677af0&is=67662970&hm=de3d84a551a64c73241f0d5998cc2487d45611b921b0fe15e1aa9c8be00aa6ed&=&format=webp&quality=lossless" width=20px height=20px alt="spotify" border="0"/>
+                <a class=link href="https://www.linkedin.com/in/irishu0909/" target="_blank">
+                    <img src="images/linkedin.png" width=20px height=20px alt="linkedin" border="0"/>
+                </a>
+                <a class=link href="https://github.com/eyeris-who" target="_blank">
+                    <img src="images/github.png" width=20px height=20px alt="github" border="0"/>
+                </a>
+                <a class=link href="https://www.instagram.com/viiiiiris/" target="_blank">
+                    <img src="images/instagram.png" width=20px height=20px alt="instagram" border="0"/>
+                </a>
+                <a class=link href="mailto:irishu0909@gmail.com">
+                    <img src="images/mail.png" width=20px height=20px alt="mail" border="0"/>
+                </a>
             </div>
         </div>
 
+        <button id="theme-switch">
+            <img src="images/sun.png" width=30px height=30px/>
+            <img src="images/moon.webp" width=20px height=20px/>
+        </button>
+
         <div class="spacer"></div>
         
-        <section id="home" class="hidden">
+        <section id="home">
             <h1 class="typewriter" restart="no" dataText = '["Who am I?", "Hu am I?"]'>Who am i?</h1>
             <a href="" class="typewriter" restart="yes" dataText='[ "University student.", "Front-end developer.", "Artist.", "Musician." ]'>
                 <span class="wrap"></span>
             </a>
             <p>sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext sometext </p>
         </section>
-        <section id="projects" class="hidden">
 
+        <section id="projects">
+            <div class="spacer"></div>
+            <h1>My Projects</h1>
+            <div class="project full">
+                <a href="https://github.com/talatiarav/CFM-Final-Project/blob/main/Portfolio_Builder.ipynb" target="_blank">
+                    Portfolio Generator
+                </a>
+                <p>Python (pandas, NumPy, Matplotlib)</p>
+                <p>Devised an algorithm to strategically choose 12-24 stocks from a list of tickers and build a portfolio to beat the market.</p>
+            </div>
+            <div class="project full">
+                <a href="https://github.com/cavalier08/Bunny-Buddy" target="_blank"><u>Bunny Buddy</u></a>
+                <p>HTML, CSS, JavaScript</p>
+                <p>Built an interactive web app that gamifies productivity by rewarding completed tasks with virtual coins.</p>
+            </div>
+            <div class="project full">
+                <a href="https://docs.google.com/document/d/1LLW5ObRD1B-TkKpzMfTQyLaeJhMcoloQ/edit?usp=sharing&ouid=102273550188784393050&rtpof=true&sd=true" target="_blank">
+                    Optimization of an N-Gonal Prism and its Applications</a>
+                <p>Java, Data Analysis</p>
+                <p>Analyzed the relationship between the number of sides of a prism with its maximum volume, given a fixed surface area.
+                    Connected my findings to real-life applications, such as the process behind designing packaging for various goods.
+                </p>
+            </div>
+            <div class="project full">
+                <a href="https://docs.google.com/document/d/1fVXzCCzdTTb56o4hF6_X-RYW-jTbU2Ay/edit?usp=sharing&ouid=102273550188784393050&rtpof=true&sd=true" target="_blank">
+                    Solving the (Restricted) Three-Body Problem
+                </a>
+                <p>Data Analysis</p>
+                <p>Predicted the Earth and Moon's orbitals with the Sun fixed at an origin point, assuming that forces of other celestial bodies in the solar system aren't present and the Sun is in a fixed position.</p>
+            </div>
         </section>
-        <section id="tools" class="hidden">
 
+        <section id="tools">
+            <div class="spacer"></div>
+            <h1>Technologies and Tools</h1>
+            <h3>Languages</h3>
+            <div class="tools-container">
+                <div class = "tool full">
+                    <img src="images/python.png" width=40>
+                    <p>Python</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/java.png" width=40>
+                    <p>Java</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/racket.png" width=40>
+                    <p>Racket</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/html.png" width=40>
+                    <p>HTML</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/css.svg" width=40>
+                    <p>CSS</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/JavaScript.png" width=40>
+                    <p>JavaScript</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/php.png" width=40>
+                    <p>PHP</p>
+                </div>
+            </div>
+            <h3>Developer Tools</h3>
+            <div class="tools-container">
+                <div class = "tool full">
+                    <img src="images/github-logo.png" width=40>
+                    <p>GitHub</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/vscode.png" width=40>
+                    <p>Visual Studio Code</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/jupyter.png" width=40>
+                    <p>Jupyter Notebook</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/eclipse.png" width=40>
+                    <p>Eclipse</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/microsoft.png" width=40>
+                    <p>Microsoft Office Suite</p>
+                </div>
+                <div class = "tool full">
+                    <img src="images/google.png" width=40>
+                    <p>Google Suite</p>
+            </div>
+            </div>
         </section>
-        <section id="contact" class="hidden">
+
+        <section id="contact" class="full">
+            <div class="spacer"></div>
             <h1>Contact Me</h1>
             <form method="post" action="send-email.php">
                 <label for="name">Name</label><br>
