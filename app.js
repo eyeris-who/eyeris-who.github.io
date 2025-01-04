@@ -17,21 +17,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+let darkmode = localStorage.getItem('darkmode')
+const themeSwitch = document.getElementById('theme-switch')
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode')
+    localStorage.setItem('darkmode', 'active')
+}
+const disableDarkmode=() => {
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode', null)
+}
+if(darkmode === "active") {
+    enableDarkmode()
+}
+themeSwitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    if (darkmode !=="active") {
+        enableDarkmode()
+    }
+    else {
+        disableDarkmode();
+    }
+})
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('move');
         }
-
         else {
             entry.target.classList.remove('move');
         }
     });
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+const fullElements = document.querySelectorAll('.full');
+fullElements.forEach((el) => observer.observe(el));
 
 document.addEventListener('DOMContentLoaded', function(event) {
     const elements = document.getElementsByClassName('typewriter');
@@ -40,10 +62,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
         const dataText = JSON.parse(element.getAttribute('dataText') || '[]');
         const restart = element.getAttribute('restart') || 'yes';
         let currentIndex = 0;
+        let blinkInterval;
         
         function typeWriter(text, i, fnCallback) {
             if (i < text.length) {
-                element.innerHTML = text.substring(0, i+1) + '<span aria-hidden="true"></span>';
+                element.innerHTML = text.substring(0, i+1) + '<span aria-hidden="true" class="blink"></span>';
                 setTimeout(function() {
                     typeWriter(text, i + 1, fnCallback)
                 }, 100);
@@ -54,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
         
         function deleteWriter(text, i, fnCallback) {
             if (i >= 0) {
-                element.innerHTML = text.substring(0, i) + '<span aria-hidden="true"></span>';
+                element.innerHTML = text.substring(0, i) + '<span aria-hidden="true" class="blink"></span>';
                 setTimeout(function() {
                     deleteWriter(text, i - 1, fnCallback)
                 }, 100);
@@ -64,25 +87,37 @@ document.addEventListener('DOMContentLoaded', function(event) {
         }
 
         function blinkCaret() {
-            const currentText = dataText[dataText.length - 1];
-            element.innerHTML = currentText + '<span aria-hidden="true" class="blink"></span>';
-            setTimeout(blinkCaret, 700);
+            const currentText = element.innerHTML;
+            const textWithoutCaret = currentText.replace('<span aria-hidden="true" class="blink"></span>', '');
+            element.innerHTML = textWithoutCaret + '<span aria-hidden="true" class="blink"></span>';
         }
         
         function startAnimation() {
             typeWriter(dataText[currentIndex], 0, function() {
-                setTimeout(function() {
-                    deleteWriter(dataText[currentIndex], dataText[currentIndex].length, function() {
-                        currentIndex = (currentIndex + 1) % dataText.length;
-                        startAnimation();
-                    });
-                }, 1000);
+                if (restart.toLowerCase() === 'yes') {
+                    // For restart=yes, always delete and move to next text
+                    setTimeout(function() {
+                        deleteWriter(dataText[currentIndex], dataText[currentIndex].length, function() {
+                            currentIndex = (currentIndex + 1) % dataText.length; // Loop back to start when reaching the end
+                            startAnimation();
+                        });
+                    }, 1000);
+                } else {
+                    // For restart=no, only delete if not the last text
+                    if (currentIndex < dataText.length - 1) {
+                        setTimeout(function() {
+                            deleteWriter(dataText[currentIndex], dataText[currentIndex].length, function() {
+                                currentIndex++;
+                                startAnimation();
+                            });
+                        }, 1000);
+                    }
+                }
             });
         }
         
         if (dataText.length > 0) {
             if (restart.toLowerCase() === 'yes') {
-                // Initial blink for 1000ms before starting animation
                 element.innerHTML = '<span aria-hidden="true" class="blink"></span>';
                 setTimeout(startAnimation, 10000);
             } else if (restart.toLowerCase() === 'no'){
@@ -94,8 +129,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
                                 startAnimation();
                             });
                         }, 1000);
-                    } else {
-                        blinkCaret();
                     }
                 });
             }
