@@ -354,6 +354,11 @@ input[type=email] {
         height: 30px;
     }
 
+    .topnav a .text, 
+    .topnav a:hover .text{
+        font-size:0.7em;
+    }    
+
     .float-box {
         transform: translateX(150%);
     }
