@@ -261,6 +261,16 @@ span {
     border-right: .05em solid;
     animation: caret 1s steps(1) infinite;
 }
+
+h1 span {
+    color: var(--header-color);
+    border-right-color: var(--header-color);
+}
+
+h3 span {
+    color: var(--subheader-color);
+    border-right-color: var(--subheader-color);
+}
   
  @keyframes caret {
     50% {
