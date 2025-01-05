@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const navbar = document.querySelector('.topnav');
         const floatBox = document.querySelector('.float-box');
         
-        // Change this value to adjust when the transition happens
         const scrollTrigger = 20; 
         
         if (scrollPosition > scrollTrigger) {
@@ -19,13 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let darkmode = localStorage.getItem('darkmode')
 const themeSwitch = document.getElementById('theme-switch')
+const pfpImage = document.getElementById('pfp')
+const audioElement = document.querySelector('audio')
 const enableDarkmode = () => {
     document.body.classList.add('darkmode')
     localStorage.setItem('darkmode', 'active')
+    pfpImage.src = "images/longlegs.jpeg"
+    audioElement.src = "images/honey.mp3"
 }
 const disableDarkmode=() => {
     document.body.classList.remove('darkmode')
     localStorage.setItem('darkmode', null)
+    pfpImage.src = "images/winter.jpeg"
+    audioElement.src = "images/September-Instrumental.mp3"
 }
 if(darkmode === "active") {
     enableDarkmode()
