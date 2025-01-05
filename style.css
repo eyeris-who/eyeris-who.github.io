@@ -8,25 +8,26 @@
 
     /* SCSS RGB */
     --base-color: rgba(33,34,39);
-    --base-variant: rgba(68,79,89);
-    --header-color: rgba(255,242,100);
-    --subheader-color: rgba(243,161,103);
+    --base-variant: rgb(123, 147, 168);
+    --header-color: rgba(243,161,103);
+    --subheader-color: rgba(255,242,100);
     --text-color: white;
-    --brownie: rgba(59,21,0);
+    --bg: rgba(255,242,100, 0.25);
     --transition-speed: 0.5s;
 }
 
 .darkmode {
-    --base-color: rgb(0, 42, 255);
-    --base-variant: rgb(89, 175, 255);
-    --header-color: rgba(255,242,100);
-    --subheader-color: rgb(255, 230, 212);
-    --text-color: black;
+    --base-color: #FEF200ff;
+    --base-variant: #00EDFAff;
+    --header-color: #493DFDff;
+    --subheader-color: #2B6EF6ff;
+    --text-color: #120630ff;
+    --bg: rgba(0, 237, 250, 0.25);
     --transition-speed: 0.5s;
 }
 
 body {
-    background: var(--base-variant);
+    background: var(--base-color);
     font-family: 'Poppins', sans-serif;
     transition: background-color var(--transition-speed) ease;
 }
@@ -45,10 +46,30 @@ input, select, button{
     font-size: inherit;
 }
 
-#home, #projects, #tools, #contact {
+h1 {
+    color: var(--header-color);
+    font-size: 4em;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: var(--subheader-color);
+    font-size: 1.5em;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+#home, #projects, #tools {
     height:auto;
     width: calc(100% - 40vh - 30px);
     margin-left:17px;
+}
+
+#contact {
+    width: calc(100% - 40vh - 30px);
+    margin-left:17px;
+    margin-bottom: 300px;
 }
 
 .topnav {
@@ -63,8 +84,8 @@ input, select, button{
     align-items: center;
     width: 90%;
     border-radius: 15px;
-    background-color: var(--base-color);    
-    box-shadow: 0 0 5px 5px var(--base-color);
+    background: radial-gradient(ellipse at top, var(--header-color), transparent),
+                radial-gradient(ellipse at bottom, var(--base-variant), transparent);   
     transition: all var(--transition-speed) ease;
     z-index: 1000;
 }
@@ -74,7 +95,7 @@ input, select, button{
     margin: 0;
     left: 20px;
     transform: translateX(0);
-    width: calc(100% - 35vh - 70px); /* 35vh is float-box width, 70px for padding */
+    width: calc(100% - 35vh - 70px);
     z-index: 1000;
 }
 
@@ -86,7 +107,7 @@ input, select, button{
     cursor: pointer;
     padding: 14px 16px;
     transition: var(--transition-speed);
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     display: inline-block;
     transition: background-color var(--transition-speed) ease; 
 }
@@ -123,7 +144,7 @@ input, select, button{
     right: 30px;
     height: 50vh;
     width: 30vh;
-    background: linear-gradient(to top, var(--base-color), var(--base-variant));
+    background: radial-gradient(var(--base-variant) 20%, var(--header-color) 65%, transparent);
     display: flex;
     border-radius: 15px 15px 15px 15px;
     transition: all var(--transition-speed) ease;
@@ -138,12 +159,16 @@ input, select, button{
     z-index: 1000;
 }
 
+.float-box.scrolled h2 {
+    font-size: 2.2em;
+    color: var(--base-color);
+}
+
 #pfp {
     position: absolute;
     margin-top: 10%;
     margin-bottom: 50%;
     width: 70%;
-    background-color: blue;
     object-fit: cover;
     object-position: center;
 }
@@ -158,15 +183,21 @@ input, select, button{
     height: 15%;
 }
 
+.name h2 {
+    font-size: 1.5em;
+    color: var(--base-color);
+    margin: 0;
+    transition: font-size var(--transition-speed) ease;
+}
+
 audio {
     position: absolute;
-    top: 77%; /* Adjust this value to position it below the .name box */
+    top: 77%;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%; /* Adjust width as needed */
+    width: 80%;
     height: 30px;
-    background-color: #f5f5f5; /* Optional: Add a background color for better visibility */
-    border-radius: 50px; /* Optional: Rounded corners */
+    border-radius: 50px;
 }
 
 audio::-webkit-media-controls-current-time-display,
@@ -194,7 +225,7 @@ audio::-webkit-media-controls-time-remaining-display {
     padding:0;
     border-radius:50%;
     border:none;
-    box-shadow: 0 0 5px 0px var(--base-color);
+    box-shadow: 0 0 7px 0px var(--subheader-color);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -220,6 +251,12 @@ audio::-webkit-media-controls-time-remaining-display {
     color:black;
 }
 
+.small-spacer {
+    width: 100%;
+    height: 15px;
+    color: blue;
+}
+
 span {
     border-right: .05em solid;
     animation: caret 1s steps(1) infinite;
@@ -232,15 +269,31 @@ span {
 }
 
 .project {
-    width:100%;
+    width:95%;
     max-width: 600px;
     height:auto;
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--bg);
+    padding: 15px;
+}
+
+.project a {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--header-color);
 }
 
 .project p {
-    color:black;
+    margin: 0;
+}
+
+.project h2 {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1em;
+    color: var(--subheader-color);
+    font-style: italic;
 }
 
 #projects .full {
@@ -313,7 +366,7 @@ input[type=email] {
     width: 170px;
     height: 30px;
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: var(--bg);
     border:none;
 }
 
@@ -322,24 +375,25 @@ input[type=email] {
     max-width: 600px;
     height: 200px;
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: var(--bg);
     border:none;
     font-family: inherit;
     font-size: inherit;
 }
 
 #send {
-    width: 70px;
-    height: 40px;
+    width: 100px;
+    height: 50px;
     border-radius: 5px;
-    background-color:aqua;
+    background-color: var(--base-variant);
+    font-size:1.2em;
     border:none;
     transition: var(--transition-speed);
     cursor: pointer;
 }
 
 #send:hover {
-    background-color: blue;
+    background-color: var(--header-color);
     color: white;
 }
 
