@@ -135,6 +135,14 @@ h3 {
     border-radius: 5px;
 }
 
+body:not(.darkmode) .topnav a .text {
+    color: var(--base-color);
+}
+
+.darkmode .topnav a .text {
+    color: white;
+}
+
 .topnav a:hover .icon {
     opacity:0;
 }
