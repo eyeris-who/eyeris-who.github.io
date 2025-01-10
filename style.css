@@ -60,6 +60,12 @@ h3 {
     margin-bottom:10px;
 }
 
+.underline {
+    color: var(--subheader-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 #home, #projects, #tools {
     height:auto;
     width: calc(100% - 40vh - 30px);
