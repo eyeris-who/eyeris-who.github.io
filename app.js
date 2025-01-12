@@ -29,7 +29,7 @@ const enableDarkmode = () => {
 const disableDarkmode=() => {
     document.body.classList.remove('darkmode')
     localStorage.setItem('darkmode', null)
-    pfpImage.src = "images/winter.jpeg"
+    pfpImage.src = "images/snow.jpeg"
     audioElement.src = "images/September-Instrumental.mp3"
 }
 if(darkmode === "active") {
